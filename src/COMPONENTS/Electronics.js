@@ -11,7 +11,7 @@ function Electronics() {
         <div>
             {Data.filter((item) => item.category === "electronics").map(item => {
                 return (<div>
-                    <img src={item.images[0]} />
+                    <img src={item.images[0]} alt='#' />
 
                 </div>
                 )

@@ -11,7 +11,7 @@ function Mobile() {
         <div>
 
             {Data.filter((item) => item.category === "mobile").map(item => {
-                return <img src={item.images[0]} />
+                return <img src={item.images[0]} alt='#' />
             })}
         </div>
     )

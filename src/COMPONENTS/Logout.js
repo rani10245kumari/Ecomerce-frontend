@@ -11,7 +11,7 @@ function Logout() {
     return (
         <div>
             {Data.filter((item) => item.category === "health").map(item => {
-                return <img src={item.images[0]} />
+                return <img src={item.images[0]} alt='#' />
             })}
         </div>
     )
