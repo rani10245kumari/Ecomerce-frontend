@@ -13,7 +13,7 @@ function Clothes() {
 
             {Data.filter((item) => item.category === "clothes").map(item => {
                 return (<div>
-                    <img src={item.images[0]} />
+                    <img src={item.images[0]} alt='#' />
 
                 </div>
                 )
