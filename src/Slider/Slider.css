@@ -1,0 +1,26 @@
+/* Slider.css */
+.slider-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.slider {
+    display: flex;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 80vh;
+}
+
+.caption {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}

@@ -9,15 +9,19 @@ function Clothes() {
         axios.get("http://localhost:5780/").then(response => { setData(response.data) })
     })
     return (
-        <div>
-
-            {Data.filter((item) => item.category === "clothes").map(item => {
-                return (<div>
-                    <img src={item.images[0]} alt='#' />
-
-                </div>
-                )
-            })}
+        <div className='main-container'>
+            <div className='container2'>
+                {Data.filter((item) => item.category === "clothes").map(item => {
+                    return (
+                        <div className='item-container'>
+                            <img src={item.images[0]} alt='#' className='image' />
+                            <h4>{item.title}</h4>
+                            <p>Rating:{item.rating}</p>
+                            <span>${item.Dprice}</span> <span className='Aprice'>${item.Aprice}</span>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
 
     )

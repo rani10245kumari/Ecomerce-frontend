@@ -25,3 +25,35 @@
   background-color: cadetblue;
   width: 100%;
 }
+
+/*-------body design=======*/
+.main-container {
+  height: 200vh;
+}
+
+.container2 {
+  display: flex;
+  height: 190vh;
+  width: 100%;
+  gap: 4vw;
+  flex-wrap: wrap;
+
+}
+
+.item-container {
+  border: 2px solid grey;
+  text-align: center;
+  width: 20vw;
+  height: auto;
+}
+
+.image {
+  height: 30vh;
+  width: 15vw;
+
+}
+
+.Aprice {
+  text-decoration: line-through;
+  color: grey;
+}
