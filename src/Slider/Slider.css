@@ -2,6 +2,8 @@
 .slider-container {
     width: 100%;
     overflow-x: hidden;
+    position: absolute;
+    top: 28.5vh;
 }
 
 .slider {
@@ -16,11 +18,4 @@
 img {
     width: 100%;
     height: 80vh;
-}
-
-.caption {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
 }

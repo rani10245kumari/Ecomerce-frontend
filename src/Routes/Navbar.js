@@ -7,6 +7,8 @@ import '../App.css';
 import Clothes from "../COMPONENTS/Clothes";
 import Electronics from "../COMPONENTS/Electronics";
 import Mobile from "../COMPONENTS/Mobile";
+
+
 function Navbar() {
     return (
         <div>

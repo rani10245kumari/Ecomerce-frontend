@@ -27,7 +27,6 @@ const Slider = ({ slides }) => {
                 {slides.map((slide, index) => (
                     <div key={index} className="slide">
                         <img src={slide.image} alt={`Product ${index + 1}`} />
-                        <div className="caption">{slide.caption}</div>
                     </div>
                 ))}
             </div>

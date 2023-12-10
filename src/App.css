@@ -1,18 +1,88 @@
+/*===============HEADER DESIGN=======================*/
+.header {
+  height: 13.5vh;
+  width: 100%;
+  background-color: rgb(252, 202, 213);
+}
+
+.logo {
+  height: 10vh;
+  width: 6vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+}
+
+.search-item {
+  position: absolute;
+  top: 2vh;
+  left: 25%;
+  height: 8vh;
+  width: 45vw;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 20px;
+
+  border-color: rgb(177, 19, 111);
+}
+
+.search-main {
+  z-index: 1;
+  width: 100%;
+  border: 2px solid blue;
+  position: absolute;
+  background-color: antiquewhite;
+  top: 30vh;
+}
+
+.search-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  justify-content: space-between;
+
+}
+
+.search-detail2 {
+  display: flex;
+  gap: 8vw;
+  justify-content: space-evenly;
+  border: 1px solid salmon;
+  text-align: center;
+}
+
+
+
+.search-detail2 button {
+  height: 30px;
+  font-size: 20px;
+
+}
+
+.search-img {
+  height: 25vh;
+  width: 15vw;
+}
+
+/*====================NAVBAR DESIGN================*/
 .Nav {
   list-style: none;
-  background-color: #333;
+  background-color: #585858;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
+  height: 15vh;
   color: white;
+  position: relative;
+  top: -2.4vh;
 }
 
 .Nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .Nav a:hover {
@@ -26,7 +96,7 @@
   width: 100%;
 }
 
-/*-------body design=======*/
+/*-------body design of all component--------------------=======*/
 .main-container {
   height: 200vh;
 }
@@ -41,14 +111,14 @@
 }
 
 .item-container {
-  border: 2px solid grey;
+  border: 1px solid rgb(150, 148, 148);
   text-align: center;
   width: 20vw;
   height: auto;
 }
 
 .image {
-  height: 30vh;
+  height: 35vh;
   width: 15vw;
 
 }
@@ -56,4 +126,78 @@
 .Aprice {
   text-decoration: line-through;
   color: grey;
+}
+
+/*==============HOME PAGE===========================*/
+.container-home {
+  height: 165vh;
+  position: absolute;
+  top: 120vh;
+  border: 2px solid green;
+}
+
+.container2-home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12vw;
+
+}
+
+.container-home h1 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.Shop-more {
+  height: 60vh;
+  position: relative;
+  top: 255vh;
+  border: 2px solid red;
+  width: 100%;
+}
+
+.Shop-more img {
+  height: 60vh;
+}
+
+.Shop-more button {
+  position: absolute;
+  top: 26vh;
+  left: 16vw;
+  height: 8vh;
+  width: 10vw;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  border-color: chocolate;
+  color: rgb(102, 79, 3);
+}
+
+.Shop-more h4 {
+  position: absolute;
+  top: 7vh;
+  left: 2vw;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.facilties {
+  height: 60vh;
+  border: 3px solid black;
+  width: 100%;
+  position: relative;
+  top: 260vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: space-evenly;
+}
+
+.Csupport {
+  height: 40vh;
+  width: 22vw;
+  border-radius: 15px;
+  border: 3px solid red;
+  background-color: #fff0f0;
 }
