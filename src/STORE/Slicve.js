@@ -6,6 +6,7 @@ const Slice = createSlice({
         filterdata: (state, action) => {
             state.data = action.payload
         }
+
     },
 })
 

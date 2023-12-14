@@ -2,7 +2,8 @@ import React from 'react'
 import Slider from '../Slider/Slider';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 
 function Home() {
     const slides = [
@@ -16,7 +17,7 @@ function Home() {
         axios.get("http://localhost:5780/").then(response => { setData(response.data) })
     })
 
-
+    const Navigate = useNavigate()
     //const Product = useSelector((state) => state.data.data)
     //console.log(Product)
     return (
@@ -29,7 +30,7 @@ function Home() {
                 <div className='container2-home'>
                     {Data.filter((item) => item.rating === "4.2").map(item => {
                         return (
-                            <div className='item-container'>
+                            <div className='item-container' onClick={() => Navigate(`/product/${item.id}`)}>
                                 <img src={item.images[0]} alt='#' className='image' />
                                 <h4>{item.title}</h4>
                                 <p>Rating:{item.rating}</p>

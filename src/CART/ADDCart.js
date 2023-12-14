@@ -6,23 +6,23 @@ import { RemoveItem, IncreaseQuantity, DecreaseQuantity } from "../STORE/Slicve"
 const Cart = () => {
     const dispatch = useDispatch();
 
-    const data = useSelector((state) => state.Cart.cart);
+    const selector = useSelector((state) => state.cart.cartitems)
+    console.log(selector)
 
-    const total = data.reduce((acc, item) => {
-        return acc + item.Dprice * item.quantity;
-    }, 0);
 
     const handleIncreaseQuantity = (id) => {
-        dispatch(IncreaseQuantity({ id }));
+        // dispatch(IncreaseQuantity({ id }));
     };
 
     const handleDecreaseQuantity = (id) => {
-        dispatch(DecreaseQuantity({ id }));
+        // dispatch(DecreaseQuantity({ id }));
     };
 
     const handleRemoveItem = (id) => {
-        dispatch(RemoveItem({ id }));
+        // dispatch(RemoveItem({ id }));
     };
+
+
 
     return (
         <div>
@@ -37,11 +37,11 @@ const Cart = () => {
                 </div>
 
                 <div>
-                    {data &&
-                        data.map((item, index) => {
+                    {selector &&
+                        selector.map((item, index) => {
                             return (
                                 <div className="content-cart" key={index}>
-                                    <img src={item.images} alt="Loading..." />
+                                    <img src={item.images[0]} alt="Loading..." />
                                     <div className="cart-subcontent">
                                         <h2>{item.title}</h2>
                                         <button
@@ -75,10 +75,10 @@ const Cart = () => {
                         })}
                 </div>
 
-                <div className="total">
+                {/* <div className="total">
                     <h2>Total=</h2>
                     <h1 style={{ color: "black" }}>{total}</h1>
-                </div>
+                </div> */}
 
 
             </div>

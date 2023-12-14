@@ -27,6 +27,7 @@
   border-color: rgb(177, 19, 111);
 }
 
+/*-------------search part---------*/
 .search-main {
   z-index: 1;
   width: 100%;
@@ -34,6 +35,12 @@
   position: absolute;
   background-color: antiquewhite;
   top: 30vh;
+}
+
+.crossbtn {
+  font-size: 25px;
+  height: 5vh;
+  float: right;
 }
 
 .search-detail {
@@ -200,4 +207,53 @@
   border-radius: 15px;
   border: 3px solid red;
   background-color: #fff0f0;
+}
+
+/*---------------single page design-------------*/
+.single-page {
+  display: flex;
+  gap: 10vw;
+}
+
+.single-page-img {
+  border: 2px solid grey;
+  height: 75vh;
+  width: 60vw;
+}
+
+.single-page-img img {
+  height: 30vh;
+  width: 20vw;
+}
+
+.single-page2 {
+  /* display: flex;
+  flex-direction: column; */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.single-page h4 {
+  font-size: 28px;
+  color: blue;
+}
+
+.price-detail {
+  display: flex;
+  gap: 3vw;
+}
+
+.aprice {
+  text-decoration: line-through;
+}
+
+.aprice span {
+  text-decoration: none;
+}
+
+.Addcart {
+  height: 8vh;
+  width: 12vw;
+  font-size: 18px;
+  background-color: rgb(10, 149, 184);
 }
