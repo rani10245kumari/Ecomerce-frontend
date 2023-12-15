@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { filterdata } from '../STORE/Slicve'
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-
+import { cartslice } from '../STORE/cartslice'
 
 
 function Header() {
+
     const [open, setopen] = useState(false)
     const dispatch = useDispatch()
     const [Data, setData] = useState([])
     const [querry, setquerry] = useState()
+
+
+    const countItem = useSelector((state) => state.cart.cartitems);
+    console.log(countItem)
 
     const handelsearch = (e) => {
         setquerry(e.target.value)
@@ -37,7 +42,8 @@ function Header() {
 
             <div className='authentication'>
                 <span className='user'><i class="fa-solid fa-user"></i></span>
-                <span className='cart-icon'><i class="fa-solid fa-cart-shopping"></i></span>
+                <span>{countItem.length}</span>
+                <a className='cart-icon' href='/cart'><i class="fa-solid fa-cart-shopping"></i></a>
 
                 <div className='user-fill'>
                     <Link to="/signup">signup</Link>

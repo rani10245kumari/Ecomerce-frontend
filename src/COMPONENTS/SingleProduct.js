@@ -6,6 +6,7 @@ import { addtocart } from '../STORE/cartslice'
 
 
 
+
 function SingleProduct() {
     const param = useParams()
     const [Data, setData] = useState([])

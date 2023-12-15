@@ -141,12 +141,7 @@ a {
   text-decoration: underline;
 }
 
-.footerUi {
-  position: absolute;
-  bottom: 0;
-  background-color: cadetblue;
-  width: 100%;
-}
+
 
 /*-------body design of all component--------------------=======*/
 .main-container {
@@ -234,6 +229,7 @@ a {
   color: aliceblue;
 }
 
+/* =================customer support facilities========================*/
 .facilties {
   height: 60vh;
   border: 3px solid black;
@@ -247,11 +243,25 @@ a {
 }
 
 .Csupport {
-  height: 40vh;
+  height: 48vh;
   width: 22vw;
   border-radius: 15px;
   border: 3px solid red;
   background-color: #fff0f0;
+  text-align: justify;
+  color: gray;
+}
+
+.support {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(128, 0, 90);
+
+}
+
+.Csupport h2 {
+  text-align: center;
+  color: rgb(235, 81, 127);
 }
 
 /*---------------single page design-------------*/

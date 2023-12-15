@@ -1,4 +1,4 @@
-import Footer from './Footer';
+import './App.css'
 import Header from './Routes/Header';
 import Navbar from './Routes/Navbar';
 
@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
       <Navbar></Navbar>
 
-      {/* <Footer></Footer> */}
+
     </div>
   );
 }

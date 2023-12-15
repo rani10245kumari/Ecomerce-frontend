@@ -1,25 +1,26 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RemoveItem, IncreaseQuantity, DecreaseQuantity } from "../STORE/Slicve";
+import { RemoveItem, IncreaseQuantity, DecreaseQuantity } from "../STORE/cartslice";
 
 
 const Cart = () => {
     const dispatch = useDispatch();
 
     const selector = useSelector((state) => state.cart.cartitems)
-    console.log(selector)
+    console.log(selector);
 
 
     const handleIncreaseQuantity = (id) => {
-        // dispatch(IncreaseQuantity({ id }));
+        const quantity = selector.cartitems
+        //dispatch(IncreaseQuantity({ id }));
     };
 
     const handleDecreaseQuantity = (id) => {
-        // dispatch(DecreaseQuantity({ id }));
+        //dispatch(DecreaseQuantity({ id }));
     };
 
     const handleRemoveItem = (id) => {
-        // dispatch(RemoveItem({ id }));
+        //dispatch(RemoveItem({ id }));
     };
 
 
