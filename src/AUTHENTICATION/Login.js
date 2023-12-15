@@ -17,7 +17,7 @@ function Login() {
             })
                 .then(res => {
                     if (res.detail = "already exist") {
-                        history("/Header", { state: { id: email } })
+                        history("/", { state: { id: email } })
                     }
                     else if (res.detail = "notexist") {
                         alert("user have not signup")

@@ -10,19 +10,21 @@ function SIGNUP() {
 
     async function submit(e) {
         e.preventDefault();
-
+        const data = {
+            email: email,
+            Password: Password
+        }
         try {
-            await axios.post("http://localhost:5780/signup", {
-                email, Password
-            })
+            axios.post("http://localhost:5780/signup", data)
                 .then(res => {
-                    if (res.detail = "already exist") {
+                    console.log(res)
+                    if (res.data === "already exist") {
                         alert("user already exist")
 
                     }
-                    else if (res.detail = "notexist") {
-                        history("/Header", { state: { id: email } })
-                        // alert("user have not signup")
+                    else if (res.data === "user registerd") {
+                        history("/", { state: { id: email } })
+                        alert("user registerd")
                     }
                 })
                 .catch(e => {
