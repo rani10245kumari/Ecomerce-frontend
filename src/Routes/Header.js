@@ -33,10 +33,17 @@ function Header() {
         <div className='header'>
             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3hqScikJMr1Pdt46RnZ06F-YD3E30kwq54Q&usqp=CAU' alt='#' className='logo'></img>
             <input placeholder='Search Products' className='search-item' onChange={handelsearch} />
-            <span className='cart-icon'><i class="fa-solid fa-cart-shopping"></i></span>
+
 
             <div className='authentication'>
-                <Link to="/signup">signup</Link>
+                <span className='user'><i class="fa-solid fa-user"></i></span>
+                <span className='cart-icon'><i class="fa-solid fa-cart-shopping"></i></span>
+
+                <div className='user-fill'>
+                    <Link to="/signup">signup</Link>
+                    <Link to="/login">Login</Link>
+                </div>
+
                 {/* {location.state.id} */}
             </div>
             {

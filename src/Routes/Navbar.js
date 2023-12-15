@@ -34,9 +34,9 @@ function Navbar() {
                 <Route path="/HealthCare" element={<Logout></Logout>}></Route>
                 <Route path="/product/:id" element={<SingleProduct />}></Route>
                 <Route path="/cart" element={<Cart></Cart>}></Route>
-                <Route path="/Header" element={<Header></Header>}></Route>
+                {/* <Route path="/Header" element={<Header></Header>}></Route> */}
                 <Route path="/signup" element={<SIGNUP></SIGNUP>}></Route>
-                <Route path="login" element={<Login></Login>}></Route>
+                <Route path="/login" element={<Login></Login>}></Route>
 
             </Routes>
 
