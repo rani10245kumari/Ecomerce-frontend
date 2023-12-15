@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { filterdata } from '../STORE/Slicve'
 import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -35,6 +36,7 @@ function Header() {
             <span className='cart-icon'><i class="fa-solid fa-cart-shopping"></i></span>
 
             <div className='authentication'>
+                <Link to="/signup">signup</Link>
                 {/* {location.state.id} */}
             </div>
             {

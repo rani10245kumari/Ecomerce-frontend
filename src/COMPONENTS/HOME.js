@@ -47,10 +47,18 @@ function Home() {
                 <button>Shop Now</button>
             </div>
             <div className='facilties'>
-                <div className='Csupport'>hjgj</div>
-                <div className='Csupport'>gfhfghf</div>
-                <div className='Csupport'>sfdfd</div>
-                <div className='Csupport'>wrwrewer</div>
+                <div className='Csupport'>
+                    <p><i class="fa-solid fa-truck-fast"></i></p>
+                </div>
+                <div className='Csupport'>
+                    <p><i class="fa-solid fa-headset"></i></p>
+                </div>
+                <div className='Csupport'>
+                    <p><i class="fa-solid fa-handshake"></i></p>
+                </div>
+                <div className='Csupport'>
+                    <p><i class="fa-solid fa-user-lock serviceIcon"></i></p>
+                </div>
             </div>
         </div>
     )
