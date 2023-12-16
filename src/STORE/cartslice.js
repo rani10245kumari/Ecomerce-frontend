@@ -10,53 +10,47 @@ const cartslice = createSlice({
     reducers: {
         addtocart: (state, action) => {
 
-            // const value = localStorage.getItem('myOrder');
-            // console.log(value);
-            // const value2 = value.indexOf(action.payload)
-            // console.log(value2)
 
-            // if (value2 !== -1) {
-            //     state.quantity += 1;
-            // }
-            // else {
+            const existingItem = state.cartitems.find(item => item.id === action.payload.id);
+            if (existingItem) {
+                // If the item exists, update the quantity
+                existingItem.quantity += 1;
+            } else {
+                // If the item does not exist, add it to the cart
+                const newItem = { ...action.payload, quantity: 1 };
+                state.cartitems.push(newItem);
+            }
+            localStorage.setItem("myOrder", JSON.stringify(state.cartitems));
 
-            //     const temp = { ...action.payload }
-            //     //state.push({ ...action.payload, qty: 1 })
-            //     state.cartitems.push(temp)
-            //     state.quantity += 1;
-            //     localStorage.setItem("myOrder", JSON.stringify(state.cartitems));
-            // }
-            const value = localStorage.getItem('myOrder');
-            console.log(value);
 
-            if (value) {
-                const cartItems = JSON.parse(value);
 
-                // Check if the item is already in the cart
-                const existingItem = cartItems.find(item => item.id === action.payload.id);
+        },
+        RemoveItem: (state, action) => {
+            const reomveitem = state.cartitems.filter((items) => items.id !== action.payload)
+            state.cartitems = reomveitem;
+            localStorage.setItem("myOrder", JSON.stringify(state.cartitems));
+        },
 
-                if (existingItem) {
-                    // If the item exists, update the quantity
-                    existingItem.qty += 1;
-                } else {
-                    // If the item does not exist, add it to the cart
-                    const newItem = { ...action.payload, qty: 1 };
-                    cartItems.push(newItem);
-                }
-
-                // Update the local storage and state
-                localStorage.setItem("myOrder", JSON.stringify(cartItems));
+        IncreaseQuantity: (state, action) => {
+            const item = state.cartitems.find((item) => item.id === action.payload.id);
+            if (item) {
+                item.quantity += 1;
+                item.total = item.Dprice * item.quantity;
             }
 
-            // Update the state based on the modified cartItems
-            state.cartitems = JSON.parse(localStorage.getItem('myOrder')) || [];
-            state.quantity = state.cartitems.reduce((total, item) => total + item.qty, 0);
-
-        }
-
+        },
+        DecreaseQuantity: (state, action) => {
+            const item = state.cartitems.find((item) => item.id === action.payload.id);
+            if (item && item.quantity > 1) {
+                item.quantity -= 1;
+                item.total = item.Aprice * item.quantity;
+            }
+        },
     },
+
+
 })
 
 
-export const { addtocart } = cartslice.actions
+export const { addtocart, RemoveItem, IncreaseQuantity, DecreaseQuantity } = cartslice.actions
 export default cartslice.reducer

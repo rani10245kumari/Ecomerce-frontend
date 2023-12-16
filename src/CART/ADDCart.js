@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RemoveItem, IncreaseQuantity, DecreaseQuantity } from "../STORE/cartslice";
-
+import './cart.css'
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -12,15 +12,15 @@ const Cart = () => {
 
     const handleIncreaseQuantity = (id) => {
         const quantity = selector.cartitems
-        //dispatch(IncreaseQuantity({ id }));
+        dispatch(IncreaseQuantity({ id }));
     };
 
     const handleDecreaseQuantity = (id) => {
-        //dispatch(DecreaseQuantity({ id }));
+        dispatch(DecreaseQuantity({ id }));
     };
 
     const handleRemoveItem = (id) => {
-        //dispatch(RemoveItem({ id }));
+        dispatch(RemoveItem(id));
     };
 
 
@@ -35,7 +35,10 @@ const Cart = () => {
                     <h4>Title</h4>
                     <h4>Price</h4>
                     <h4>Quantity</h4>
+                    <h4>Total</h4>
+
                 </div>
+                <hr></hr>
 
                 <div>
                     {selector &&
@@ -45,6 +48,7 @@ const Cart = () => {
                                     <img src={item.images[0]} alt="Loading..." />
                                     <div className="cart-subcontent">
                                         <h2>{item.title}</h2>
+                                        <p>{item.Dprice}</p>
                                         <button
                                             className="remove-cart"
                                             onClick={() => handleRemoveItem(item.id)}
