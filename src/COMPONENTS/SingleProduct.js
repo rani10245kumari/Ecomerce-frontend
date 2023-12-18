@@ -14,7 +14,7 @@ function SingleProduct() {
         axios.get("http://localhost:5780/").then(response => { setData(response.data) })
     }, [])
     let product = Data.find((element) =>
-        element.id == param.id
+        element.id === param.id
 
     )
     //console.log(product);
