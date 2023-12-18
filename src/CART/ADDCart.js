@@ -97,7 +97,7 @@ const Cart = () => {
                         navigate('/payment')
                     }
                     else {
-                        alert('please signup first')
+                        alert('please login first')
                     }
                 }} className="order-detail">placeOrder</button>
 
