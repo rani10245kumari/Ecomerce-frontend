@@ -43,7 +43,7 @@ function Home() {
 
             </div>
             <div className='Shop-more'>
-                <img src='https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?w=740&t=st=1702020032~exp=1702020632~hmac=1fe6cf1158a8cb06edc44343d4cec52e6d981103637fc5ffc06399284e6c5e25'></img>
+                <img src='https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?w=740&t=st=1702020032~exp=1702020632~hmac=1fe6cf1158a8cb06edc44343d4cec52e6d981103637fc5ffc06399284e6c5e25' alt='#'></img>
                 <h4>GET UPTO 50-70% OFF ON ALL PRODUCTS</h4>
                 <button>Shop Now</button>
             </div>

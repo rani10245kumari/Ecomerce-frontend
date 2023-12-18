@@ -17,7 +17,7 @@ const Cart = () => {
 
 
     const handleIncreaseQuantity = (id) => {
-        const quantity = selector.cartitems
+        // const quantity = selector.cartitems
         dispatch(IncreaseQuantity({ id }));
     };
 

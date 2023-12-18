@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addtocart } from '../STORE/cartslice'
 
 
@@ -17,11 +17,11 @@ function SingleProduct() {
 
     console.log(product);
     const dispatch = useDispatch()
-    const Addtocart = () => {
-        dispatch(addtocart(product))
-    }
+    // const Addtocart = () => {
+    //     dispatch(addtocart(product))
+    // }
 
-    const selector = useSelector((state) => state.cart)
+    // const selector = useSelector((state) => state.cart)
     //console.log(selector)
 
 
