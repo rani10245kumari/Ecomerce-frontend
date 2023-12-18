@@ -1,6 +1,16 @@
+.cart-main-page {
+    background-image: url('https://img.freepik.com/free-photo/3d-illustration-smartphone-with-products-coming-out-screen-online-shopping-e-commerce-concept_58466-14529.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702771200&semt=ais');
+    position: relative;
+    top: -7vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 .headcart {
-    font-size: 32px;
+    font-size: 40px;
     text-align: center;
+    color: rgb(82, 13, 82);
 }
 
 .cart-content {
@@ -14,7 +24,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 28px;
-    color: rgb(201, 40, 93);
+    color: rgb(236, 12, 135);
     position: relative;
     left: -7vw;
 }
@@ -29,7 +39,7 @@
 .content-cart {
     display: flex;
     justify-content: space-evenly;
-
+    color: rgb(2, 61, 51);
 }
 
 .content-cart img {
@@ -40,8 +50,9 @@
 .quantity-btn {
     height: 6vh;
     width: 8vw;
-    background-color: seagreen;
+    background-color: rgb(55, 165, 103);
     font-size: 28px;
+
 }
 
 .quantity {
@@ -51,7 +62,7 @@
 .remove-cart {
     height: 6vh;
     width: 9vw;
-    background-color: rgb(122, 75, 18);
+    background-color: rgb(22, 139, 185);
     font-size: 16px;
     color: aliceblue;
 }
@@ -63,12 +74,13 @@
     align-items: center;
 } */
 
-.order-detail button {
+.order-detail {
     height: 8vh;
     width: 15vw;
-    background-color: rgb(205, 255, 253);
+    background-color: seagreen;
     font-size: 28px;
     position: absolute;
     left: 45%;
+    bottom: -8vh;
     border-radius: 10px;
 }

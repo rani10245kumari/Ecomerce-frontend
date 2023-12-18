@@ -5,7 +5,8 @@ const cartslice = createSlice({
     initialState: {
 
         cartitems: localStorage.getItem("myOrder") ? JSON.parse(localStorage.getItem("myOrder")) : [],
-        quantity: 0
+        quantity: 0,
+        authentication: localStorage.getItem("auth") ? JSON.parse(localStorage.getItem("auth")) : false,
     },
     reducers: {
         addtocart: (state, action) => {
@@ -46,11 +47,16 @@ const cartslice = createSlice({
                 item.total = item.Aprice * item.quantity;
             }
         },
+        authenticationUser: (state, action) => {
+            state.authentication = action.payload
+            localStorage.setItem("auth", JSON.stringify(state.authentication));
+
+        }
     },
 
 
 })
 
 
-export const { addtocart, RemoveItem, IncreaseQuantity, DecreaseQuantity } = cartslice.actions
+export const { addtocart, RemoveItem, IncreaseQuantity, DecreaseQuantity, authenticationUser } = cartslice.actions
 export default cartslice.reducer

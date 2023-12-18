@@ -12,6 +12,8 @@ const Cart = () => {
 
     const selector = useSelector((state) => state.cart.cartitems)
     console.log(selector);
+    const { authentication } = useSelector((state) => state.cart)
+
 
 
     const handleIncreaseQuantity = (id) => {
@@ -30,7 +32,7 @@ const Cart = () => {
 
 
     return (
-        <div>
+        <div className="cart-main-page">
             <h2 className="headcart">Cart</h2>
 
             <div className="cart-content">
@@ -87,11 +89,18 @@ const Cart = () => {
 
                 </div>
 
-                <div className="order-detail">
 
 
-                    <button onClick={() => navigate('/payment')}>placeOrder</button>
-                </div>
+
+                <button onClick={() => {
+                    if (authentication) {
+                        navigate('/payment')
+                    }
+                    else {
+                        alert('please signup first')
+                    }
+                }} className="order-detail">placeOrder</button>
+
 
 
 

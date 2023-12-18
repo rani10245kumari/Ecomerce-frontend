@@ -28,7 +28,7 @@ function Navbar() {
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/Mobile" element={<Mobile></Mobile>}></Route>
-                <Route path="/Clothes" element={<Clothes></Clothes>}></Route>
+                <Route path="/clothes" element={<Clothes></Clothes>}></Route>
                 <Route path="/Electronics" element={<Electronics></Electronics>}></Route>
                 <Route path="/HealthCare" element={<Logout></Logout>}></Route>
                 <Route path="/product/:id" element={<SingleProduct />}></Route>

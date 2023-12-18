@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-
+import { authenticationUser } from "../STORE/cartslice"
+import { useDispatch } from 'react-redux'
 
 function Login() {
     const history = useNavigate();
     const [email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
+    const dispatch = useDispatch();
+
 
     async function submit(e) {
         e.preventDefault();
@@ -18,6 +21,7 @@ function Login() {
                 .then(res => {
                     if (res.detail = "already exist") {
                         history("/", { state: { id: email } })
+                        dispatch(authenticationUser(true));
                     }
                     else if (res.detail = "notexist") {
                         alert("user have not signup")

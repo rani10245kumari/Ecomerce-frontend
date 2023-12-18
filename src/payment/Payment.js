@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import "./payment.css"
 import { loadStripe } from '@stripe/stripe-js';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -46,19 +46,14 @@ const Payment = () => {
 
     return (
         <div className="paymentcheckout">
-            <div className='d-flex flex-align-center flex-justify-center h-60' style={{ background: "linear-gradient(180deg ,#f3f4ff, rgb(252, 240, 235))" }}>
-                <img src="/images/stripe-banner.png" alt="" className='w-50 -h-100-per' />
-                <div className="w-50 d-flex flex-align-center flex-justify-center">
-                    <div onClick={checkout} className='bg-blue color-white fw-bold d-flex flex-align-center flex-justify-center brsx-radius-3 ps-5 cr-pointer fs-mm-2 w-200px'>Checkout</div>
 
-                </div>
+            <img src="https://blog.travelgate.com/hubfs/Imported_Blog_Media/online-payment-3.png" alt="#" />
 
+            <br></br>
+            <button onClick={checkout} className='paybtn'>Checkout</button>
 
-
-
-
-            </div>
         </div>
+
     )
 }
 

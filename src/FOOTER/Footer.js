@@ -10,15 +10,15 @@ const Footer = () => {
                 <div className="footer-section about">
                     <h2>About Us</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis vel augue aliquet consectetur.
+                        Founded in 2023, RK began as a one of the best shopping website with a wide range of all products. Our journey started with a vision to provide the product as cheapest rate in th market and value for money. Over the years, we have grown and evolved, always keeping our commitment to quality, innovation, customer satisfaction, etc.at the forefront.
                     </p>
                 </div>
                 <div className="footer-section links">
                     <h2>Quick Links</h2>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/services">Services</a></li>
+                        <li><a href="/clothes">Clothes</a></li>
+                        <li><a href="/Mobile">Mobile</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                &copy; 2023 Your Company Name. All rights reserved.
+                &copy; 2023 RK .
             </div>
         </div>
     );
