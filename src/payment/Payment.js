@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const Payment = () => {
 
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const data = useSelector((state) => state.cart.cartitems)
     const arr = []
     const [items, setItems] = useState([])

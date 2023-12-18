@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { filterdata } from '../STORE/Slicve'
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { cartslice } from '../STORE/cartslice'
+
 
 
 function Header() {
