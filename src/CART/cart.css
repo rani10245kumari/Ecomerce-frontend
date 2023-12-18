@@ -7,20 +7,68 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
 }
 
 .headOfcart {
     display: flex;
     justify-content: space-evenly;
-    font-size: 22px;
-    color: palevioletred;
+    font-size: 28px;
+    color: rgb(201, 40, 93);
+    position: relative;
+    left: -7vw;
+}
+
+.container-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+
 }
 
 .content-cart {
     display: flex;
+    justify-content: space-evenly;
+
 }
 
 .content-cart img {
-    height: 10vh;
+    height: 18vh;
     width: 15vw;
+}
+
+.quantity-btn {
+    height: 6vh;
+    width: 8vw;
+    background-color: seagreen;
+    font-size: 28px;
+}
+
+.quantity {
+    font-size: 28px;
+}
+
+.remove-cart {
+    height: 6vh;
+    width: 9vw;
+    background-color: rgb(122, 75, 18);
+    font-size: 16px;
+    color: aliceblue;
+}
+
+/* .order-detail {
+    height: 40vh;
+    width: 40vw;
+    border: 2px solid rgb(3, 36, 3);
+    align-items: center;
+} */
+
+.order-detail button {
+    height: 8vh;
+    width: 15vw;
+    background-color: rgb(205, 255, 253);
+    font-size: 28px;
+    position: absolute;
+    left: 45%;
+    border-radius: 10px;
 }

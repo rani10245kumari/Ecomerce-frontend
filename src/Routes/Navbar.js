@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
 import Home from "../COMPONENTS/HOME";
 import Logout from "../COMPONENTS/Logout";
 import '../App.css';
@@ -12,7 +11,7 @@ import Cart from "../CART/ADDCart";
 import SIGNUP from "../AUTHENTICATION/Signup";
 import Login from "../AUTHENTICATION/Login";
 import Header from "./Header";
-
+import Payment from '../payment/Payment'
 
 function Navbar() {
     return (
@@ -34,10 +33,9 @@ function Navbar() {
                 <Route path="/HealthCare" element={<Logout></Logout>}></Route>
                 <Route path="/product/:id" element={<SingleProduct />}></Route>
                 <Route path="/cart" element={<Cart></Cart>}></Route>
-                {/* <Route path="/Header" element={<Header></Header>}></Route> */}
                 <Route path="/signup" element={<SIGNUP></SIGNUP>}></Route>
                 <Route path="/login" element={<Login></Login>}></Route>
-
+                <Route path="/payment" element={<Payment></Payment>}></Route>
             </Routes>
 
 

@@ -42,6 +42,7 @@ function Header() {
 
             <div className='authentication'>
                 <span className='user'><i class="fa-solid fa-user"></i></span>
+
                 <span className='counting'>{countItem.length}</span>
                 <a className='cart-icon' href='/cart'><i class="fa-solid fa-cart-shopping"></i></a>
 
