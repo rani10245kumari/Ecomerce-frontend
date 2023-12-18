@@ -9,29 +9,27 @@ import { addtocart } from '../STORE/cartslice'
 
 function SingleProduct() {
     const param = useParams()
-    const [Data, setData] = useState([])
+    const [product, setData] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:5780/").then(response => { setData(response.data) })
-    }, [])
-    let product = Data.find((element) =>
-        element.id === param.id
+        axios.get("http://localhost:5780/").then(response => { setData(response.data.filter((element) => element.id == param.id)[0]) })
+    }, [param])
+    //let product = Data.find((element) => element.id === param.id)
 
-    )
-    //console.log(product);
+    console.log(product);
     const dispatch = useDispatch()
     const Addtocart = () => {
         dispatch(addtocart(product))
     }
 
     const selector = useSelector((state) => state.cart)
-    console.log(selector)
+    //console.log(selector)
 
 
 
     return (
         <div className='single-page'>
             <div className='single-page-img'>
-                {product && product.images.map((lm) => {
+                {product && product?.images?.map((lm) => {
                     return (
                         <>
                             <img src={lm}></img>

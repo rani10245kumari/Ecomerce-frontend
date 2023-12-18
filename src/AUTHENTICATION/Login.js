@@ -19,11 +19,11 @@ function Login() {
                 email, Password
             })
                 .then(res => {
-                    if (res.detail = "already exist") {
+                    if (res.detail === "already exist") {
                         history("/", { state: { id: email } })
                         dispatch(authenticationUser(true));
                     }
-                    else if (res.detail = "notexist") {
+                    else if (res.detail === "notexist") {
                         alert("user have not signup")
                     }
                 })
