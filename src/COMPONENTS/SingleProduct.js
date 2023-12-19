@@ -7,6 +7,7 @@ import { addtocart } from '../STORE/cartslice'
 
 
 
+
 function SingleProduct() {
     const param = useParams()
     const [product, setData] = useState([])
@@ -30,9 +31,11 @@ function SingleProduct() {
         <div className='single-page'>
             <div className='single-page-img'>
                 {product && product?.images?.map((lm) => {
+                    //console.log(lm)
                     return (
                         <>
-                            <img src={lm}></img>
+                            <img src={lm} alt='#' ></img>
+
                         </>
                     )
                 })}

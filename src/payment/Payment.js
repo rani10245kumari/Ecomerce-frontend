@@ -3,7 +3,7 @@ import axios from 'axios'
 import "./payment.css"
 import { loadStripe } from '@stripe/stripe-js';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
 
 
 const Payment = () => {

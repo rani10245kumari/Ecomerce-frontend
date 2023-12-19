@@ -10,7 +10,6 @@ import SingleProduct from "../COMPONENTS/SingleProduct";
 import Cart from "../CART/ADDCart";
 import SIGNUP from "../AUTHENTICATION/Signup";
 import Login from "../AUTHENTICATION/Login";
-import Header from "./Header";
 import Payment from '../payment/Payment'
 
 function Navbar() {

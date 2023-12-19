@@ -29,9 +29,9 @@ function Header() {
 
     useEffect(() => {
         dispatch(filterdata(Data))
-    }, [])
+    },)
 
-    const location = useLocation()
+    //const location = useLocation()
     // console.log(location)
 
     return (
