@@ -36,17 +36,18 @@ function SingleProduct() {
     return (
         <div className='single-page'>
             <div className='single-page-img'>
-                <div>
+                <div className='big-img'>
                     <img src={imgl} alt='#'></img>
                 </div>
 
                 {product && product?.images?.map((lm) => {
                     //console.log(lm)
                     return (
-                        <>
-                            <img src={lm} alt='#' onClick={handelimages}></img>
-
-                        </>
+                        <div>
+                            <div className='small-img'>
+                                <img src={lm} alt='#' onClick={handelimages}></img>
+                            </div>
+                        </div>
                     )
                 })}
             </div>

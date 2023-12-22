@@ -20,6 +20,7 @@ function Clothes() {
                             <h4>{item.title}</h4>
                             <p>Rating:{item.rating}</p>
                             <span>${item.Dprice}</span> <span className='Aprice'>${item.Aprice}</span>
+                            s
                         </div>
                     )
                 })}

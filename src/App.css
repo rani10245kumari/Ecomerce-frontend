@@ -272,22 +272,54 @@ a {
   color: rgb(235, 81, 127);
 }
 
-/*---------------single page design-------------*/
+/*---------------single page design----------------------*/
 .single-page {
   display: flex;
-  gap: 10vw;
+  gap: 8vw;
 }
 
 .single-page-img {
-  border: 2px solid grey;
-  height: 75vh;
+  border: 2px solid rgb(102, 95, 95);
+  height: 90vh;
   width: 60vw;
+  display: flex;
+
+
 }
 
-.single-page-img img {
-  height: 30vh;
+.big-img {
+  border: 2px solid green;
+  position: absolute;
+  left: 24vw;
+}
+
+.big-img img {
+  height: 45vh;
   width: 20vw;
 }
+
+
+
+.small-img {
+  border: 3px solid red;
+  height: 20vh;
+  width: 12vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-evenly;
+  top: 60vh;
+}
+
+.small-img img {
+  height: 15vh;
+  width: 8vw;
+}
+
+/* .single-page-img {
+  height: 20vh;
+  width: 10vw;
+} */
 
 .single-page2 {
   /* display: flex;
