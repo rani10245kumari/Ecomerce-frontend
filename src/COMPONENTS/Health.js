@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 
-function Logout() {
+function Health() {
     const [Data, setData] = useState([])
     useEffect(() => {
         axios.get("http://localhost:5780/").then(response => { setData(response.data) })
@@ -28,4 +28,4 @@ function Logout() {
     )
 }
 
-export default Logout
+export default Health

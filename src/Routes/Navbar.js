@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "../COMPONENTS/HOME";
-import Logout from "../COMPONENTS/Logout";
+import Health from "../COMPONENTS/Health";
 import '../App.css';
 import Clothes from "../COMPONENTS/Clothes";
 import Electronics from "../COMPONENTS/Electronics";
@@ -29,7 +29,7 @@ function Navbar() {
                 <Route path="/Mobile" element={<Mobile></Mobile>}></Route>
                 <Route path="/clothes" element={<Clothes></Clothes>}></Route>
                 <Route path="/Electronics" element={<Electronics></Electronics>}></Route>
-                <Route path="/HealthCare" element={<Logout></Logout>}></Route>
+                <Route path="/HealthCare" element={<Health></Health>}></Route>
                 <Route path="/product/:id" element={<SingleProduct />}></Route>
                 <Route path="/cart" element={<Cart></Cart>}></Route>
                 <Route path="/signup" element={<SIGNUP></SIGNUP>}></Route>

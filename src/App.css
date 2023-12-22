@@ -44,6 +44,7 @@
   top: 7vh;
 }
 
+
 .user {
   position: absolute;
   font-size: 30px;
@@ -184,7 +185,7 @@ a {
 
 /*==============HOME PAGE===========================*/
 .container-home {
-  height: 165vh;
+  height: 176vh;
   position: absolute;
   top: 120vh;
   border: 2px solid green;
@@ -206,7 +207,7 @@ a {
 .Shop-more {
   height: 60vh;
   position: relative;
-  top: 255vh;
+  top: 265vh;
   border: 2px solid red;
   width: 100%;
 }
@@ -242,16 +243,16 @@ a {
   border: 3px solid black;
   width: 100%;
   position: relative;
-  top: 260vh;
+  top: 270vh;
   display: flex;
   flex-wrap: wrap;
-  gap: 2vw;
+  gap: 1vw;
   justify-content: space-evenly;
 }
 
 .Csupport {
-  height: 48vh;
-  width: 22vw;
+  height: 52vh;
+  width: 23vw;
   border-radius: 15px;
   border: 3px solid red;
   background-color: #fff0f0;
