@@ -37,7 +37,7 @@ function SingleProduct() {
         <div className='single-page'>
             <div className='single-page-img'>
                 <div>
-                    <img src={imgl}></img>
+                    <img src={imgl} alt='#'></img>
                 </div>
 
                 {product && product?.images?.map((lm) => {

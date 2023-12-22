@@ -26,7 +26,7 @@ const Payment = () => {
     useEffect(() => {
         setItems(arr)
 
-    }, [])
+    })
 
 
     const checkout = async () => {
