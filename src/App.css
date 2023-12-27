@@ -205,7 +205,6 @@ a {
 }
 
 .Shop-more {
-  height: 60vh;
   position: relative;
   top: 265vh;
   border: 2px solid red;
@@ -405,12 +404,6 @@ a {
     top: 8vh;
   }
 
-  /* .authMobile {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid black;
-  } */
-
   .cart-icon {
     font-size: 30px;
     position: absolute;
@@ -484,6 +477,112 @@ a {
   .hidenav {
     display: none;
   }
+
+  /*==============HOME PAGE===========================*/
+  .container-home {
+    height: auto;
+    width: 100%;
+    top: 74vh;
+    border: 2px solid green;
+  }
+
+  .container2-home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12vh;
+
+  }
+
+  /* .container-home h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+  } */
+
+
+  /*-------body design of all component--------------------=======*/
+  .main-container {
+    height: 260vh;
+  }
+
+  .container2 {
+    display: flex;
+    height: auto;
+    width: 100%;
+    gap: 5vh;
+  }
+
+  .item-container {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+  }
+
+  .image {
+    height: 35vh;
+    width: 30vw;
+  }
+
+  /*==========================shop more+++++++++++++++++++*/
+  .Shop-more {
+    position: relative;
+    top: 460vh;
+    width: 100%;
+  }
+
+  .Shop-more img {
+    height: 50vh;
+  }
+
+  .Shop-more button {
+    top: 24vh;
+    left: 6vw;
+    height: 6vh;
+    width: 25vw;
+    font-size: 14px;
+  }
+
+  .Shop-more h4 {
+    font-size: 20px;
+  }
+
+  /* =================customer support facilities========================*/
+  .facilties {
+    height: auto;
+    border: 2px solid black;
+    width: 100%;
+    position: relative;
+    top: 465vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8vh;
+    justify-content: space-evenly;
+  }
+
+  .Csupport {
+    height: 52vh;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid red;
+    background-color: #fff0f0;
+    text-align: justify;
+    color: gray;
+  }
+
+  .support {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(128, 0, 90);
+
+  }
+
+  .Csupport h2 {
+    text-align: center;
+    color: rgb(235, 81, 127);
+  }
+
 
 
 

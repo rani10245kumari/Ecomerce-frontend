@@ -24,4 +24,8 @@ img {
     .slider-container {
         top: 13.5vh;
     }
+
+    img {
+        height: 60vh;
+    }
 }
