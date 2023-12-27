@@ -38,6 +38,20 @@
     padding: 10px 0;
 }
 
+.Socialmedia {
+    height: 20vh;
+    width: 25vw;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 40vh;
+}
+
+.sicon {
+    height: 6vh;
+    width: 3vw;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     .footer-content {

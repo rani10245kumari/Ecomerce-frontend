@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { filterdata } from '../STORE/Slicve'
-
 import { Link } from 'react-router-dom'
 
 
@@ -30,27 +29,53 @@ function Header() {
         dispatch(filterdata(Data))
     },)
 
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+    const closenavigate = () => {
+        setIsOpen(false);
+    }
+
     //const location = useLocation()
     // console.log(location)
 
     return (
         <div className='header'>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3hqScikJMr1Pdt46RnZ06F-YD3E30kwq54Q&usqp=CAU' alt='#' className='logo'></img>
-            <input placeholder='Search Products' className='search-item' onChange={handelsearch} />
+            <div className='hambuger-title'>
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3hqScikJMr1Pdt46RnZ06F-YD3E30kwq54Q&usqp=CAU' alt='#' className='logo'></img>
+                <input placeholder='Search Products' className='search-item' onChange={handelsearch} />
 
+                <div className='hampburgerr' onClick={toggleMenu}>  <i class="fa-solid fa-bars"></i></div>
+                <div className='mobileNavbardiv'>
+                    <ul className={(isOpen) ? "mobileNav" : "hidenav"} >
 
-            <div className='authentication'>
-                <span className='user'><i class="fa-solid fa-user"></i></span>
+                        <li><Link to="/" onClick={toggleMenu}>Home</Link></li >
+                        <li><Link to="/Mobile" onClick={toggleMenu}>Mobile</Link></li >
+                        <li><Link to="/Clothes" onClick={toggleMenu}>Clothes</Link></li >
+                        <li><Link to="/Electronics" onClick={toggleMenu}>Electronics</Link></li >
+                        <li><Link to="/HealthCare" onClick={toggleMenu}>HealthCare</Link></li >
 
-                <span className='counting'>{countItem.length}</span>
-                <a className='cart-icon' href='/cart'><i class="fa-solid fa-cart-shopping"></i></a>
+                    </ul>
 
-                <div className='user-fill'>
-                    <Link to="/signup">signup</Link>
-                    <Link to="/login">Login</Link>
                 </div>
+                <div className={(isOpen) ? "authenticationMobile" : 'authentication'}>
 
-                {/* {location.state.id} */}
+                    <div className='authMobile'>
+                        <span className='user'><i class="fa-solid fa-user"></i></span>
+
+                        <span className='counting'>{countItem.length}</span>
+                        <a className='cart-icon' href='/cart'><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div className='user-fill'>
+                        <Link to="/signup">signup</Link>
+                        <Link to="/login">Login</Link>
+                    </div>
+
+                    {/* {location.state.id} */}
+                </div>
             </div>
             {
                 open ? <div className='search-main'>

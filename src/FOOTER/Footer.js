@@ -29,6 +29,24 @@ const Footer = () => {
                         <button type="submit">Send</button>
                     </form>
                 </div>
+                <div className="Socialmedia">
+                    <a href="https://www.facebook.com/ruhi.verma.1000469?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                        <img className="sicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRztMLZ5RO6EhrIJrzmBK2Kh2tLmsroesf87g&usqp=CAU" alt="Not Found" />
+                    </a>
+
+                    <a href="https://github.com/rani10245kumari" target="_blank" rel="noopener noreferrer">
+                        <img className="sicon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt='Not Found' />
+                    </a>
+
+                    <a href="http://instagram.com/ranik9070/" target="_blank" rel="noopener noreferrer">
+                        <img className='sicon' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGs1LETqnEyuX9xvRmPjHK7ulEtLeXSpYLHQ&usqp=CAU" alt='Not Found' />
+                    </a>
+
+                    <a href="www.linkedin.com/in/rani-kumari-001119256" target="_blank" rel="noopener noreferrer">
+                        <img className="sicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7zTyVz8gyeFBXNFNC_TJ2mdKZXMUiY6LoFg&usqp=CAU" alt="Not Found" />
+                    </a>
+
+                </div>
             </div>
             <div className="footer-bottom">
                 &copy; 2023 RK .

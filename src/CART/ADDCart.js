@@ -50,7 +50,7 @@ const Cart = () => {
                         selector.map((item, index) => {
                             return (
                                 <div className="content-cart" key={index}>
-                                    <img src={item.images[0]} alt="Loading..." />
+                                    <img src={item?.images[0]} alt="Loading..." />
 
                                     {/* <h2>{item.title}</h2> */}
                                     <h2>₹ {item.Dprice}</h2>
