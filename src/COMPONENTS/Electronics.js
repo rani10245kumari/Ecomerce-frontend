@@ -18,7 +18,7 @@ function Electronics() {
                         <div className='item-container' onClick={() => Navigate(`/product/${item.id}`)}>
 
                             <img src={item.images[0]} alt='#' className='image' />
-                            <h4>{item.title}</h4>
+                            <h4>{item.title.slice(0, 25)}..</h4>
                             <p>Rating:{item.rating}</p>
                             <span>${item.Dprice}</span> <span className='Aprice'>${item.Aprice}</span>
                         </div>

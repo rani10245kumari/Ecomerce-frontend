@@ -33,7 +33,7 @@ function Home() {
                         return (
                             <div className='item-container' onClick={() => Navigate(`/product/${item.id}`)}>
                                 <img src={item.images[0]} alt='#' className='image' />
-                                <h4>{item.title}</h4>
+                                <h4>{item.title.slice(0, 30)}..</h4>
                                 <p>Rating:{item.rating}</p>
                                 <span>${item.Dprice}</span> <span className='Aprice'>${item.Aprice}</span>
                             </div>
@@ -52,23 +52,37 @@ function Home() {
                 <div className='Csupport'>
                     <p className='support'><i class="fa-solid fa-truck-fast"></i></p>
                     <h2>FREE SHIPPING</h2>
-                    <p>We believe in transparency and making your shopping experience as enjoyable as possible. That's why we offer free shipping on all orders, so you can focus on finding the perfect items without worrying about additional charges.</p>
+                    <p>We believe in transparency and making your shopping experience as enjoyable as possible. That's why we offer free shipping on all orders, so you can...</p>
                 </div>
                 <div className='Csupport'>
                     <p className='support'><i class="fa-solid fa-headset"></i></p>
                     <h2>SUPPORT 24/7</h2>
-                    <p>Have a question at midnight or a concern in the early hours? No problem! Our dedicated support team is ready to assist you 24 hours a day, 7 days a week. Wherever you are, whenever you need us, we're just a message or call away.</p>
+                    <p>Have a question at midnight or a concern in the early hours? No problem! Our dedicated support team is ready to assist you 24 hours a day, 7 days a week...</p>
                 </div>
                 <div className='Csupport'>
                     <p className='support'><i class="fa-solid fa-handshake"></i></p>
                     <h2>100% REFUND</h2>
-                    <p>Enjoy the peace of mind that comes with our 100% Refund Guarantee. Whether there's an issue with the product, it doesn't meet your expectations, or you simply change your mind – we'll process your refund hassle-free.</p>
+                    <p>Enjoy the peace of mind that comes with our 100% Refund Guarantee. Whether there's an issue with the product, it doesn't meet your...</p>
                 </div>
                 <div className='Csupport'>
                     <p className='support'><i class="fa-solid fa-user-lock serviceIcon"></i></p>
                     <h2>SECURE PAYMENT</h2>
-                    <p>est easy knowing that your sensitive payment information is safeguarded by state-of-the-art encryption technology. Our Secure Payment Gateway employs the highest security standards to protect your data from unauthorized access.</p>
+                    <p>Best easy knowing that your sensitive payment information is safeguarded by state-of-the-art encryption technology. Our Secure Payment Gateway employs...</p>
                 </div>
+            </div>
+            <h2>Featured Product</h2>
+            <div className='featuredProduct'>
+
+                {Data.filter((item) => item.rating === "4.4").map(item => {
+                    return (
+                        <div className='item-container' onClick={() => Navigate(`/product/${item.id}`)}>
+                            <img src={item.images[0]} alt='#' className='image' />
+                            <h4>{item.title.slice(0, 30)}..</h4>
+                            <p>Rating:{item.rating}</p>
+                            <span>${item.Dprice}</span> <span className='Aprice'>${item.Aprice}</span>
+                        </div>
+                    )
+                })}
             </div>
 
             <Footer></Footer>

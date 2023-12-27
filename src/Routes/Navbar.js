@@ -16,15 +16,28 @@ function Navbar() {
     return (
         <div>
 
-            <ul className="Nav" >
+            <div className="Nav" >
 
-                <li><Link to="/">Home</Link></li >
-                <li><Link to="/Mobile">Mobile</Link></li >
-                <li><Link to="/Clothes">Clothes</Link></li >
-                <li><Link to="/Electronics">Electronics</Link></li >
-                <li><Link to="/HealthCare">HealthCare</Link></li >
+                <p><Link to="/">Home</Link></p >
 
-            </ul>
+                <div className="mob">
+                    <p className="iconn"><Link to="/Mobile"><i class="fa-solid fa-mobile"></i></Link></p>
+                    <p><Link to="/Mobile">Mobile</Link></p ></div>
+
+                <div className="mob">
+                    <p className="iconn"><Link to="/Clothes"><i class="fa-solid fa-shirt"></i></Link></p>
+                    <p> <Link to="/Clothes">Clothes</Link></p ></div>
+
+                <div className="mob">
+                    <p className="iconn"><Link to="/Electronics"><i class="fa-solid fa-headphones"></i></Link></p>
+                    <p><Link to="/Electronics">Electronics</Link></p ></div>
+
+                <div className="mob">
+                    <p className="iconn"><Link to="/HealthCare"><i class="fa-solid fa-briefcase-medical"></i></Link></p>
+                    <p><Link to="/HealthCare">HealthCare</Link></p >
+                </div>
+
+            </div>
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/Mobile" element={<Mobile></Mobile>}></Route>
@@ -39,7 +52,7 @@ function Navbar() {
             </Routes>
 
 
-        </div>
+        </div >
     )
 }
 

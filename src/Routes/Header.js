@@ -47,6 +47,7 @@ function Header() {
             <div className='hambuger-title'>
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3hqScikJMr1Pdt46RnZ06F-YD3E30kwq54Q&usqp=CAU' alt='#' className='logo'></img>
                 <input placeholder='Search Products' className='search-item' onChange={handelsearch} />
+                <p className='searchicon'><i class="fa-solid fa-magnifying-glass"></i></p>
 
                 <div className='hampburgerr' onClick={toggleMenu}>  <i class="fa-solid fa-bars"></i></div>
                 <div className='mobileNavbardiv'>

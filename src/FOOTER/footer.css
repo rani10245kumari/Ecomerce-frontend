@@ -5,8 +5,8 @@
     color: white;
     padding: 30px 0;
     position: relative;
-    top: 270vh;
-    font-size: 18px;
+    top: 300vh;
+    /* font-size: 16px; */
 }
 
 .footer-content {
@@ -45,12 +45,12 @@
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    top: 28vh;
+    top: 34vh;
 }
 
 .sicon {
-    height: 4vh;
-    width: 2vw;
+    height: 5vh;
+    width: 3vw;
 }
 
 /* Responsive styles */
