@@ -11,22 +11,25 @@ const Payment = () => {
 
     // const navigate = useNavigate()
     const data = useSelector((state) => state.cart.cartitems)
-    const arr = []
-    const [items, setItems] = useState([])
-    data.forEach((elem) => {
-        arr.push({
-            id: elem.id,
-            price: elem.Dprice,
-            quantity: elem.quantity,
-            name: elem.title,
-        })
 
-    })
+    const [items, setItems] = useState([])
+
     console.log(items)
     useEffect(() => {
+        const arr = []
+        data.forEach((elem) => {
+            arr.push({
+                id: elem.id,
+                price: elem.Dprice,
+                quantity: elem.quantity,
+                name: elem.title,
+            })
+
+        })
         setItems(arr)
 
-    }, [])
+
+    }, [data])
 
 
     const checkout = async () => {
@@ -37,10 +40,10 @@ const Payment = () => {
             const stripe = await loadStripe('pk_test_51OJiJgSHqKSNDjqqHKxgDaTSizL4h16CRajI3zfwiZLZDF76n4MAZok17F7z48Y7XHvRxdZjavEJVHINlFBsEezb007QGqdmuZ');
 
             const res = await axios.post(`http://localhost:5780/order`, items)
-            // const result = stripe.redirectToCheckout({
-            //     sessionId: res.data.id
+            stripe.redirectToCheckout({
+                sessionId: res.data.id
 
-            // })
+            })
 
 
         } catch (error) {
