@@ -35,9 +35,9 @@ function Header() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    const closenavigate = () => {
-        setIsOpen(false);
-    }
+    // const closenavigate = () => {
+    //     setIsOpen(false);
+    // }
 
     //const location = useLocation()
     // console.log(location)
