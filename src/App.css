@@ -39,7 +39,7 @@
 }
 
 .cart-icon {
-  font-size: 42px;
+  font-size: 38px;
   position: absolute;
   left: 7vw;
   top: 6vh;
@@ -48,7 +48,7 @@
 
 .user {
   position: absolute;
-  font-size: 42px;
+  font-size: 38px;
   left: 3vw;
   top: 6vh;
 }
@@ -56,7 +56,7 @@
 .counting {
   position: absolute;
   top: 2.5vh;
-  font-size: 30px;
+  font-size: 28px;
   left: 9.5vw;
 }
 

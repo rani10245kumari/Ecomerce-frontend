@@ -51,6 +51,10 @@ const cartslice = createSlice({
             state.authentication = action.payload
             localStorage.setItem("auth", JSON.stringify(state.authentication));
 
+        },
+        emptycart: (state, action) => {
+            state.cartitems = []
+            localStorage.setItem("myOrder", JSON.stringify(state.cartitems));
         }
     },
 
@@ -58,5 +62,5 @@ const cartslice = createSlice({
 })
 
 
-export const { addtocart, RemoveItem, IncreaseQuantity, DecreaseQuantity, authenticationUser } = cartslice.actions
+export const { emptycart, addtocart, RemoveItem, IncreaseQuantity, DecreaseQuantity, authenticationUser } = cartslice.actions
 export default cartslice.reducer
