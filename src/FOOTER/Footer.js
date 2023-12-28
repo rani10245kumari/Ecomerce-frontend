@@ -21,14 +21,14 @@ const Footer = () => {
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-                <div className="footer-section contact-form">
+                {/* <div className="footer-section contact-form">
                     <h2>Contact Us</h2>
                     <form>
                         <input type="email" placeholder="Your Email" />
                         <textarea placeholder="Your Message"></textarea>
                         <button type="submit">Send</button>
                     </form>
-                </div>
+                </div> */}
                 <div className="Socialmedia">
                     <a href="https://www.facebook.com/ruhi.verma.1000469?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
                         <img className="sicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRztMLZ5RO6EhrIJrzmBK2Kh2tLmsroesf87g&usqp=CAU" alt="Not Found" />

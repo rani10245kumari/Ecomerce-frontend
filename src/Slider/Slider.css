@@ -2,8 +2,8 @@
 .slider-container {
     width: 100%;
     overflow-x: hidden;
-    position: absolute;
-    top: 28.5vh;
+    /* position: absolute;
+    top: 28.5vh; */
 }
 
 .slider {
@@ -21,9 +21,9 @@ img {
 }
 
 @media screen and (min-width:280px) and (max-width:760px) {
-    .slider-container {
+    /* .slider-container {
         top: 13.5vh;
-    }
+    } */
 
     img {
         height: 60vh;

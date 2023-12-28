@@ -1,12 +1,12 @@
 /*===============HEADER DESIGN=======================*/
 body {
-  background-color: rgb(220, 253, 234);
+  background-color: rgb(240, 252, 245);
 }
 
 .header {
   height: 13.5vh;
   width: 100%;
-  background-color: rgb(207, 252, 226);
+  background-color: rgb(247, 253, 249);
 }
 
 .logo {
@@ -146,9 +146,9 @@ a {
   justify-content: space-evenly;
   gap: 3vw;
   align-items: center;
-  height: 15vh;
+  /* height: 15vh; */
   color: white;
-  position: relative;
+  /* position: relative; */
 
 }
 
@@ -183,14 +183,15 @@ a {
 
 /*-------body design of all component--------------------=======*/
 .main-container {
-  height: 200vh;
-  background-color: rgb(220, 253, 234);
+  height: auto;
+  background-color: rgb(232, 248, 239);
+  border: 2px solid red;
 }
 
 .container2 {
   display: flex;
   justify-content: space-evenly;
-  height: 190vh;
+  /* height: 190vh; */
   width: 100%;
   gap: 4vw;
   flex-wrap: wrap;
@@ -219,9 +220,9 @@ a {
 
 /*==============HOME PAGE===========================*/
 .container-home {
-  height: 176vh;
-  position: absolute;
-  top: 120vh;
+  height: auto;
+  /* position: absolute;
+  top: 120vh; */
   border: 2px solid green;
 }
 
@@ -240,19 +241,20 @@ a {
 }
 
 .Shop-more {
-  position: relative;
-  top: 265vh;
-  border: 2px solid red;
+  /* position: relative;
+  top: 265vh; */
   width: 100%;
+  margin-top: 3vh;
+  height: 67vh;
 }
 
 .Shop-more img {
-  height: 60vh;
+  height: 65vh;
 }
 
 .Shop-more button {
-  position: absolute;
-  top: 26vh;
+  position: relative;
+  bottom: 50vh;
   left: 16vw;
   height: 8vh;
   width: 10vw;
@@ -264,11 +266,11 @@ a {
 }
 
 .Shop-more h4 {
-  position: absolute;
-  top: 7vh;
+  position: relative;
+  bottom: 60vh;
   left: 2vw;
   font-size: 30px;
-  color: aliceblue;
+  color: white;
 }
 
 /* =================customer support facilities========================*/
@@ -276,8 +278,8 @@ a {
   height: 60vh;
   border: 2px solid black;
   width: 100%;
-  position: relative;
-  top: 270vh;
+  /* position: relative;
+  top: 270vh; */
   display: flex;
   flex-wrap: wrap;
   gap: 1vw;
@@ -289,7 +291,7 @@ a {
   width: 22vw;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px seagreen;
-  background-color: rgb(183, 243, 183);
+  background-color: rgb(167, 241, 198);
   text-align: center;
   color: rgb(83, 83, 83);
   line-height: 25px;
@@ -309,12 +311,19 @@ a {
 }
 
 /*=================featured product=================*/
-.featuredProduct {
+.featurehead {
+  text-align: center;
   height: auto;
   border: 2px solid black;
   width: 100%;
-  position: relative;
-  top: 290vh;
+}
+
+.featurehead h2 {
+  font-size: 36px;
+  color: rgb(38, 116, 72);
+}
+
+.featuredProduct {
   display: flex;
   flex-wrap: wrap;
   gap: 5vw;
@@ -430,6 +439,10 @@ a {
   }
 
   .search-item {
+    display: none;
+  }
+
+  .searchicon {
     display: none;
   }
 
@@ -576,9 +589,11 @@ a {
 
   /*==========================shop more+++++++++++++++++++*/
   .Shop-more {
-    position: relative;
-    top: 460vh;
+    /* position: absolute;
+    top: 490vh; */
+    margin-top: 5vh;
     width: 100%;
+    height: 52vh;
   }
 
   .Shop-more img {
@@ -586,7 +601,7 @@ a {
   }
 
   .Shop-more button {
-    top: 24vh;
+    bottom: 42vh;
     left: 6vw;
     height: 6vh;
     width: 25vw;
@@ -594,44 +609,53 @@ a {
   }
 
   .Shop-more h4 {
-    font-size: 20px;
+    font-size: 16px;
+    bottom: 50vh;
+
   }
 
   /* =================customer support facilities========================*/
   .facilties {
     height: auto;
-    border: 2px solid black;
-    width: 100%;
-    position: relative;
-    top: 465vh;
+    /* position: relative;
+    top: 520vh; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 8vh;
+    gap: 6vh;
     justify-content: space-evenly;
   }
 
   .Csupport {
-    height: 52vh;
-    width: 100%;
-    border-radius: 15px;
-    border: 1px solid red;
-    background-color: #fff0f0;
-    text-align: justify;
-    color: gray;
+    height: 50vh;
+    width: 99%;
+
   }
 
   .support {
     font-size: 30px;
     text-align: center;
-    color: rgb(128, 0, 90);
-
   }
 
-  .Csupport h2 {
+  /*=================featured product=================*/
+  .featurehead {
     text-align: center;
-    color: rgb(235, 81, 127);
+    height: auto;
+    border: 2px solid black;
+    width: 100%;
   }
+
+  .featurehead h2 {
+    font-size: 30px;
+  }
+
+  .featuredProduct {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+
+
 
 
 
