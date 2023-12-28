@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { filterdata } from '../STORE/Slicve'
 import { Link } from 'react-router-dom'
+import { Logout } from '../STORE/cartslice'
 
 
 function Header() {
@@ -12,7 +13,8 @@ function Header() {
     const [Data, setData] = useState([])
     const [querry, setquerry] = useState()
 
-
+    const authentication = useSelector((state) => state.cart.authentication);
+    console.log(authentication);
     const countItem = useSelector((state) => state.cart.cartitems);
     console.log(countItem)
 
@@ -66,13 +68,15 @@ function Header() {
 
                     <div className='authMobile'>
                         <span className='user'><i class="fa-solid fa-user"></i></span>
-
                         <span className='counting'>{countItem.length}</span>
                         <a className='cart-icon' href='/cart'><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <div className='user-fill'>
-                        <Link to="/signup">signup</Link>
-                        <Link to="/login">Login</Link>
+
+                        {authentication ? <Link onClick={() => dispatch(Logout())}> Log Out </Link> : <>
+                            <Link to="/signup">signup</Link>
+                            <Link to="/login">Login</Link>
+                        </>}
                     </div>
 
                     {/* {location.state.id} */}

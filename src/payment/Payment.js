@@ -38,7 +38,7 @@ const Payment = () => {
 
             const stripe = await loadStripe('pk_test_51OJiJgSHqKSNDjqqHKxgDaTSizL4h16CRajI3zfwiZLZDF76n4MAZok17F7z48Y7XHvRxdZjavEJVHINlFBsEezb007QGqdmuZ');
 
-            const res = await axios.post(`http://localhost:5780/order`, items)
+            const res = await axios.post(`https://ecommerce-backend-tnlo.onrender.com/order`, items)
             stripe.redirectToCheckout({
                 sessionId: res.data.id
 

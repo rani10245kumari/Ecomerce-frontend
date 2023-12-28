@@ -13,7 +13,7 @@ function SingleProduct() {
     const [product, setData] = useState([])
     const [imgl, setImgl] = useState("")
     useEffect(() => {
-        axios.get("http://localhost:5780/").then(response => {
+        axios.get("https://ecommerce-backend-tnlo.onrender.com/").then(response => {
             setData(response.data.filter((element) => element.id === parseInt(param.id))[0])
             setImgl(response.data.filter((element) => element.id === parseInt(param.id))[0].images[0])
         })

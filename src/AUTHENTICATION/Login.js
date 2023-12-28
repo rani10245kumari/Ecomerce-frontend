@@ -31,7 +31,7 @@ export default function Login() {
                 "email": mail,
                 "password": pass
             }
-            axios.post("http://localhost:5780/login", tempObj)
+            axios.post("https://ecommerce-backend-tnlo.onrender.com/login", tempObj)
                 .then((response) => {
                     setErr({ type: true, value: `${response.data.msg}` })
                     if (response.data.token)

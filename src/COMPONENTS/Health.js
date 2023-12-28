@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 function Health() {
     const [Data, setData] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:5780/").then(response => { setData(response.data) })
+        axios.get("https://ecommerce-backend-tnlo.onrender.com/").then(response => { setData(response.data) })
     })
     const Navigate = useNavigate()
     return (
