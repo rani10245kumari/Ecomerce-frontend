@@ -3,7 +3,7 @@ import Slider from '../Slider/Slider';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../FOOTER/Footer'
+
 
 
 function Home() {
