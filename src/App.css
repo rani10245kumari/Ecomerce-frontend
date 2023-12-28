@@ -566,7 +566,7 @@ a {
 
   /*-------body design of all component--------------------=======*/
   .main-container {
-    height: 260vh;
+    height: auto;
   }
 
   .container2 {
