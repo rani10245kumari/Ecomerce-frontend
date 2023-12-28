@@ -42,7 +42,7 @@ function SIGNUP() {
                 "password": password,
                 "ph": ph
             }
-            axios.post("http://localhost:5780/signup", tempObj)
+            axios.post("https://ecommerce-backend-tnlo.onrender.com/signup", tempObj)
                 .then((response) => {
                     console.log(response)
                     setErr({ type: true, value: `${response.data.msg}` })
