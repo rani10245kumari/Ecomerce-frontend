@@ -55,7 +55,7 @@ export default function Login() {
     }
     return (
         <>
-            <form className='login'>
+            <form className='form'>
                 <h2 className='header'>Sign-in to your Account</h2>    <br /><br />
                 <div className='form-item'>
                     <input type="text" name='mail' ref={mailRef} onChange={handleChange} required />   <br />
@@ -69,8 +69,10 @@ export default function Login() {
                 {err.type ? <p className='errMsg'>{err.value}</p> : null} <br />
                 {/* <label>Forgot your password?</label>   <br /> */}
                 <button className='loginBtn' onClick={handleSubmit}>LOGIN</button>
+
+                <h4> Not a member?<Link to='/signup'>Signup Page</Link></h4>
             </form>
-            <Link to='/signup'>Signup Page</Link>
+
         </>
     )
 }

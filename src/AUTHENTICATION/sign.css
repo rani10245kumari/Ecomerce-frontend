@@ -1,20 +1,20 @@
-nav {
+/* nav {
     display: flex;
     justify-content: space-around;
-}
+} */
 
-.links {
+/* .links {
     text-decoration: none;
     color: black;
     border-bottom: 2px solid red;
-}
+} */
 
 .form {
     border: 1px solid grey;
     border-radius: 15px;
     background: white;
     width: 50%;
-    height: 390px;
+    height: auto;
     margin: 5em auto;
     padding: 10px 0 0 0;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -22,6 +22,7 @@ nav {
 
 .form-item {
     position: relative;
+    left: 10vw;
 }
 
 .form-item input {

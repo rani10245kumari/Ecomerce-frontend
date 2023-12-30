@@ -338,8 +338,8 @@ a {
 
 .single-page-img {
   border: 2px solid rgb(102, 95, 95);
-  height: 80vh;
-  width: 55vw;
+  height: 85vh;
+  width: auto;
   display: flex;
 
 
@@ -353,24 +353,23 @@ a {
 
 .big-img img {
   height: 55vh;
-  width: 25vw;
+  width: auto;
 }
-
 
 
 .small-img {
   border: 2px solid skyblue;
   height: 20vh;
   width: 10vw;
-  display: flex;
-  flex-direction: column;
   position: relative;
   justify-content: space-evenly;
-  top: 60vh;
+
+  top: 62vh;
   gap: 5vw;
 }
 
 .small-img img {
+  padding: 6px;
   height: 18vh;
   width: 9vw;
 }

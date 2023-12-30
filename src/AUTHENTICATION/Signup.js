@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './sign.css'
 import { createRef } from 'react'
 
 
 function SIGNUP() {
+    const Navigate = useNavigate();
     const [name, setName] = useState("")
     const [email, setMail] = useState("")
     const [password, setPass] = useState("")
@@ -46,8 +47,11 @@ function SIGNUP() {
                 .then((response) => {
                     console.log(response)
                     setErr({ type: true, value: `${response.data.msg}` })
-                    if (response.data.token)
+                    if (response.data.token) {
                         localStorage.setItem("Token", response.data.token)
+
+                        Navigate("/login")
+                    }
                     clearInput()
                 })
         }
@@ -74,7 +78,7 @@ function SIGNUP() {
 
     return (
         <>
-            <form className='signUp'>
+            <form className='form'>
                 <h2 className='header'>Create your new Account</h2> <br />
 
                 <div className='form-item'>
@@ -98,8 +102,10 @@ function SIGNUP() {
                 </div>
                 {err.type ? <p className='errMsg'>{err.value}</p> : null}
                 <button className='signUpBtn' onClick={handleSubmit} >SIGN UP</button>
+
+                <h4>Already a user?<Link to='/login'>Login Page</Link></h4>
             </form>
-            <Link to='/login'>Login Page</Link>
+
         </>
     )
 }

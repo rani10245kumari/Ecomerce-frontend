@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../STORE/cartslice'
 
 
@@ -9,9 +9,12 @@ import { addtocart } from '../STORE/cartslice'
 
 
 function SingleProduct() {
+    const Navigate = useNavigate()
     const param = useParams()
     const [product, setData] = useState([])
     const [imgl, setImgl] = useState("")
+    const authentication = useSelector((state) => state.cart.authentication)
+
     useEffect(() => {
         axios.get("https://ecommerce-backend-tnlo.onrender.com/").then(response => {
             setData(response.data.filter((element) => element.id === parseInt(param.id))[0])
@@ -43,7 +46,7 @@ function SingleProduct() {
                 {product && product?.images?.map((lm) => {
                     //console.log(lm)
                     return (
-                        <div>
+                        <div className='smallimges'>
                             <div className='small-img'>
                                 <img src={lm} alt='#' onClick={handelimages}></img>
                             </div>
@@ -61,7 +64,15 @@ function SingleProduct() {
                 <h5>{product && product.description}</h5>
 
 
-                <button onClick={() => dispatch(addtocart(product))} className='Addcart'>ADDTOCART</button>
+                <button onClick={() => {
+                    if (authentication) {
+                        dispatch(addtocart(product))
+                    }
+                    else {
+                        alert("please login first..");
+                        Navigate("/login");
+                    }
+                }} className='Addcart'>ADDTOCART</button>
             </div>
         </div>
     )
