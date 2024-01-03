@@ -69,7 +69,7 @@ function Header() {
                     <div className='authMobile'>
                         <span className='user'><i class="fa-solid fa-user"></i></span>
                         <span className='counting'>{countItem.length}</span>
-                        <a className='cart-icon' href='/cart'><i class="fa-solid fa-cart-shopping"></i></a>
+                        <Link className='cart-icon' to='/cart'><i class="fa-solid fa-cart-shopping"></i></Link>
                     </div>
                     <div className='user-fill'>
 
