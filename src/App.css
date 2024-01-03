@@ -1,12 +1,12 @@
 /*===============HEADER DESIGN=======================*/
 body {
-  background-color: rgb(240, 252, 245);
+
+  overflow-x: hidden;
 }
 
 .header {
   height: 13.5vh;
   width: 100%;
-  background-color: rgb(247, 253, 249);
 }
 
 .logo {
@@ -178,13 +178,9 @@ a {
   background-color: rgb(206, 74, 41);
 }
 
-
-
-
 /*-------body design of all component--------------------=======*/
 .main-container {
   height: auto;
-  background-color: rgb(232, 248, 239);
   border: 2px solid red;
 }
 
@@ -556,11 +552,9 @@ a {
 
   }
 
-  /* .container-home h1 {
-    text-align: center;
-    font-size: 38px;
-    font-weight: bold;
-  } */
+  .container-home h1 {
+    font-size: 28px;
+  }
 
 
   /*-------body design of all component--------------------=======*/
@@ -640,7 +634,6 @@ a {
   .featurehead {
     text-align: center;
     height: auto;
-    border: 2px solid black;
     width: 100%;
   }
 
@@ -653,6 +646,318 @@ a {
     flex-direction: column;
     gap: 5vh;
   }
+
+  /*---------------single page design----------------------*/
+  .single-page {
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+  }
+
+  .single-page-img {
+    border: 1px solid rgb(102, 95, 95);
+    height: 85vh;
+    width: 100%;
+    display: flex;
+
+
+  }
+
+  .big-img {
+    border: 2px solid green;
+    position: absolute;
+    left: 0vw;
+    width: 99.7%;
+  }
+
+  .big-img img {
+    height: 40vh;
+    width: 99.7%;
+  }
+
+
+  .small-img {
+    height: 20vh;
+    width: 98%;
+    position: relative;
+    justify-content: space-evenly;
+    top: 62vh;
+    gap: 5vw;
+  }
+
+  .small-img img {
+    padding: 6px;
+    height: 17vh;
+    width: 88%;
+  }
+
+
+  .single-page2 {
+    font-size: 20px;
+
+  }
+
+  .price-detail {
+    display: flex;
+    gap: 3vw;
+    color: #5a0808;
+  }
+
+  .Addcart {
+    height: 6vh;
+    width: 40vw;
+    font-size: 18px;
+    background-color: rgb(10, 149, 184);
+  }
+
+}
+
+/*===================media querrry==================
+====================================*/
+
+@media screen and (min-width:761px) and (max-width:998px) {
+
+
+  /*===============HEADER DESIGN=======================*/
+
+
+  .header {
+    height: 11vh;
+  }
+
+  .logo {
+    height: 8vh;
+
+  }
+
+  .search-item {
+    height: 6vh;
+    font-size: 22px;
+  }
+
+  .searchicon {
+    top: 2vh;
+    left: 66%;
+    font-size: 20px;
+  }
+
+  .hampburgerr {
+    display: none;
+  }
+
+  /*-----------========cartlogo-page----------------------==========*/
+  .authentication {
+    width: 14vw;
+    left: 82vw;
+  }
+
+  .cart-icon {
+    font-size: 34px;
+    left: 9vw;
+    top: 6.5vh;
+  }
+
+  .user {
+    left: 2vw;
+    top: 6.5vh;
+  }
+
+  .counting {
+    top: 4.7vh;
+    font-size: 22px;
+    left: 13vw;
+  }
+
+  .user-fill {
+    display: none;
+  }
+
+  .authentication:hover .user-fill {
+    top: 11.5vh;
+    background-color: rgb(177, 241, 241);
+    font-size: 28px;
+  }
+
+  /* -------------search part--------- */
+  .search-main {
+    top: 30vh;
+  }
+
+  .crossbtn {
+    font-size: 20px;
+    float: right;
+  }
+
+  .search-img {
+    height: 20vh;
+    width: 19vw;
+  }
+
+
+  /*====================NAVBAR DESIGN================*/
+  .Nav {
+    list-style: none;
+    background-color: seagreen;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3vw;
+
+  }
+
+  .Nav a {
+    font-size: 22px;
+  }
+
+
+  .mob {
+    gap: 1vw;
+    font-size: 19px;
+  }
+
+  .iconn {
+    height: 3vh;
+    width: 4vw;
+  }
+
+  /*-------body design of all component--------------------=======*/
+  .main-container {
+    height: auto;
+  }
+
+  .container2 {
+    gap: 7vw;
+  }
+
+  .item-container {
+    width: 26vw;
+    height: auto;
+  }
+
+  .image {
+    height: 23vh;
+    width: 22vw;
+  }
+
+  /*==============HOME PAGE===========================*/
+  .container-home {
+    height: auto;
+  }
+
+  .container2-home {
+    gap: 7vw;
+  }
+
+  .container-home h1 {
+    font-size: 32px;
+  }
+
+  /*=================shop more=================*/
+  .Shop-more {
+    height: 45vh;
+  }
+
+  .Shop-more img {
+    height: 44vh;
+  }
+
+  .Shop-more button {
+    bottom: 32vh;
+    left: 13vw;
+    height: 5vh;
+    width: 16vw;
+    font-size: 19px;
+  }
+
+  .Shop-more h4 {
+    bottom: 40vh;
+    font-size: 26px;
+  }
+
+  /* =================customer support facilities========================*/
+  .facilties {
+    height: 65vh;
+    gap: 7vw;
+    justify-content: space-evenly;
+  }
+
+  .Csupport {
+    height: 30vh;
+    width: 40vw;
+    line-height: 24px;
+  }
+
+  .support {
+    font-size: 38px;
+  }
+
+  /*=================featured product=================*/
+
+
+  .featurehead h2 {
+    font-size: 34px;
+  }
+
+  .featuredProduct {
+    gap: 4vw;
+  }
+
+  /*---------------single page design----------------------*/
+  .single-page {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+
+  .single-page-img {
+    border: 1px solid rgb(102, 95, 95);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    gap: 3vh;
+  }
+
+  .big-img {
+    position: absolute;
+    left: 5vw;
+    width: 90%;
+  }
+
+  .big-img img {
+    height: 42vh;
+    width: 100%;
+  }
+
+
+  .small-img {
+    height: 19vh;
+    width: 99%;
+    top: 55vh;
+    gap: 5vw;
+  }
+
+  .small-img img {
+    padding: 6px;
+    height: 17vh;
+    width: 88%;
+  }
+
+
+  .single-page2 {
+    font-size: 24px;
+
+  }
+
+  .price-detail {
+    gap: 4vw;
+  }
+
+  .Addcart {
+    height: 6vh;
+    width: 40vw;
+    font-size: 22px;
+    background-color: rgb(10, 149, 184);
+  }
+
 
 
 

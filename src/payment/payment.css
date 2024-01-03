@@ -1,19 +1,19 @@
  .paymentcheckout {
-     position: relative;
+     /* position: relative; */
      background-image: url('https://img.freepik.com/premium-photo/toy-shopping-cart-with-boxes-credit-card-with-copy-space_339191-197.jpg');
-     height: 72vh;
-     position: relative;
-     top: -5vh;
+     height: 75vh;
+     /* position: relative;
+     top: -5vh; */
      background-size: cover;
 
  }
 
  .paymentcheckout img {
-     height: 35vh;
+     height: 45vh;
      width: 25vw;
      position: absolute;
      left: 35%;
-     top: 8vh;
+     top: 28vh;
 
  }
 
@@ -25,6 +25,46 @@
      border-radius: 20px;
      position: absolute;
      left: 35%;
-     top: 50vh;
+     top: 80vh;
      color: white;
+ }
+
+ /*=============MEDIA QUERRY=========================*/
+
+ @media screen and (min-width:280px) and (max-width:760px) {
+
+     .paymentcheckout img {
+         height: 35vh;
+         width: 50vw;
+         left: 25%;
+
+     }
+
+     .paybtn {
+         height: 8vh;
+         width: 40vw;
+         font-size: 22px;
+         left: 30%;
+         top: 68vh;
+
+     }
+
+ }
+
+ @media screen and (min-width:761px) and (max-width:998px) {
+     .paymentcheckout img {
+         height: 30vh;
+         width: 60vw;
+         left: 20%;
+
+     }
+
+     .paybtn {
+         height: 8vh;
+         width: 40vw;
+         font-size: 32px;
+         left: 30%;
+         top: 68vh;
+
+     }
  }

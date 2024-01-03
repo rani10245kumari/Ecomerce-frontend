@@ -61,7 +61,7 @@ function SingleProduct() {
                     <span className='aprice'>₹{product && product.Aprice}</span>
                     <span>{product && product.discountPercentage}% OFF</span>
                 </p>
-                <h5>{product && product.description}</h5>
+
 
 
                 <button onClick={() => {
@@ -73,6 +73,7 @@ function SingleProduct() {
                         Navigate("/login");
                     }
                 }} className='Addcart'>ADDTOCART</button>
+                <h5>{product && product.description}</h5>
             </div>
         </div>
     )

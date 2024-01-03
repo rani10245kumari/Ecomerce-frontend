@@ -56,18 +56,21 @@ const Cart = () => {
                                     <h2>₹ {item.Dprice}</h2>
 
 
+                                    <div className="buttnhandel">
+                                        <button
+                                            className="quantity-btn"
+                                            onClick={() => handleDecreaseQuantity(item.id)}>
+                                            -
+                                        </button>
+                                        <span className="quantity">{item.quantity}</span>
+                                        <button
+                                            className="quantity-btn"
+                                            onClick={() => handleIncreaseQuantity(item.id)}>+ </button>
+                                    </div>
 
 
-                                    <button
-                                        className="quantity-btn"
-                                        onClick={() => handleDecreaseQuantity(item.id)}
-                                    >
-                                        -
-                                    </button>
-                                    <span className="quantity">{item.quantity}</span>
-                                    <button
-                                        className="quantity-btn"
-                                        onClick={() => handleIncreaseQuantity(item.id)}>+ </button>
+
+
                                     <h2 className="cartprice">
                                         <span>=</span>
                                         {"₹ " + item.Dprice * item.quantity}

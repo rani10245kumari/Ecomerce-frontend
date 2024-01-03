@@ -25,7 +25,23 @@ img {
         top: 13.5vh;
     } */
 
+
     img {
         height: 60vh;
     }
+
+    .slider-container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:761px) and (max-width:998px) {
+    img {
+        height: 45vh;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
 }
