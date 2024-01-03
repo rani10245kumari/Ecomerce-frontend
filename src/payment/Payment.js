@@ -4,13 +4,13 @@ import "./payment.css"
 import { loadStripe } from '@stripe/stripe-js';
 import { useSelector, useDispatch } from 'react-redux';
 import { emptycart } from '../STORE/cartslice'
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 
 const Payment = () => {
 
     const dispatch = useDispatch()
-    const navigate = useNavigate()
+    //const navigate = useNavigate()
     const data = useSelector((state) => state.cart.cartitems)
 
     const [items, setItems] = useState([])
