@@ -38,7 +38,7 @@ export default function Login() {
                     if (response.data.token) {
                         localStorage.setItem("Token", response.data.token)
                         dispatch(authenticationUser(true));
-                        Navigate("/")
+                        Navigate("https://resilient-otter-cde763.netlify.app/")
                     }
                     clearInput()
                 })
