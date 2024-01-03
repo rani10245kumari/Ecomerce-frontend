@@ -4,10 +4,11 @@ import axios from 'axios'
 import { authenticationUser } from "../STORE/cartslice"
 import { useDispatch } from 'react-redux'
 import { createRef } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Login() {
+    const Navigate = useNavigate();
     const dispatch = useDispatch();
     const [mail, setMail] = useState("")
     const [pass, setPass] = useState("")
@@ -34,9 +35,11 @@ export default function Login() {
             axios.post("https://ecommerce-backend-tnlo.onrender.com/login", tempObj)
                 .then((response) => {
                     setErr({ type: true, value: `${response.data.msg}` })
-                    if (response.data.token)
+                    if (response.data.token) {
                         localStorage.setItem("Token", response.data.token)
-                    dispatch(authenticationUser(true));
+                        dispatch(authenticationUser(true));
+                        Navigate("/")
+                    }
                     clearInput()
                 })
         }
