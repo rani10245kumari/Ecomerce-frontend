@@ -37,6 +37,7 @@ function SingleProduct() {
 
 
     return (
+
         <div className='single-page'>
             <div className='single-page-img'>
                 <div className='big-img'>
@@ -76,6 +77,11 @@ function SingleProduct() {
                 <h5>{product && product.description}</h5>
             </div>
         </div>
+
+
+
+
+
     )
 }
 

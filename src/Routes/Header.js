@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { filterdata } from '../STORE/Slicve'
 import { Link } from 'react-router-dom'
 import { Logout } from '../STORE/cartslice'
-
+import { authenticationUser } from '../STORE/cartslice'
 
 function Header() {
 
@@ -68,12 +68,15 @@ function Header() {
 
                     <div className='authMobile'>
                         <span className='user'><i class="fa-solid fa-user"></i></span>
-                        <span className='counting'>{countItem.length}</span>
-                        <Link className='cart-icon' to='/cart'><i class="fa-solid fa-cart-shopping"></i></Link>
+                        <span className='counting'>{authentication ? `${countItem.length}` : 0}</span>
+                        <Link className='cart-icon' to='/cart' onClick={toggleMenu}><i class="fa-solid fa-cart-shopping"></i></Link>
                     </div>
                     <div className='user-fill'>
 
-                        {authentication ? <Link onClick={() => dispatch(Logout())}> Log Out </Link> : <>
+                        {authentication ? <Link onClick={() => {
+                            dispatch(Logout());
+                            dispatch(authenticationUser(false));
+                        }}> Log Out </Link> : <>
                             <Link to="/signup">signup</Link>
                             <Link to="/login">Login</Link>
                         </>}

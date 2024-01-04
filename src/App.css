@@ -773,9 +773,11 @@ a {
   }
 
   .authentication:hover .user-fill {
-    top: 11.5vh;
+    left: 0px;
+    top: 10px;
     background-color: rgb(177, 241, 241);
     font-size: 28px;
+    border: 2px solid red;
   }
 
   /* -------------search part--------- */

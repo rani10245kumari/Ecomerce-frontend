@@ -35,12 +35,12 @@ export default function Login() {
             axios.post("https://ecommerce-backend-tnlo.onrender.com/login", tempObj)
                 .then((response) => {
                     setErr({ type: true, value: `${response.data.msg}` })
-                    if (response.data.token) {
+                    if (response.data.token)
                         localStorage.setItem("Token", response.data.token)
-                        dispatch(authenticationUser(true));
-                        Navigate("https://resilient-otter-cde763.netlify.app/")
-                    }
+                    dispatch(authenticationUser(true));
                     clearInput()
+                    setTimeout(() => { Navigate("/") }, 2500)
+
                 })
         }
     }

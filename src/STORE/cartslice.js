@@ -58,6 +58,7 @@ const cartslice = createSlice({
         },
         Logout: (state, action) => {
             state.authentication = false
+
             localStorage.removeItem("auth", "Token")
         }
     },
