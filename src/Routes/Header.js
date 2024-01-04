@@ -72,14 +72,14 @@ function Header() {
                         <Link className='cart-icon' to='/cart' onClick={toggleMenu}><i class="fa-solid fa-cart-shopping"></i></Link>
                     </div>
                     <div className='user-fill'>
-
                         {authentication ? <Link onClick={() => {
                             dispatch(Logout());
                             dispatch(authenticationUser(false));
                         }}> Log Out </Link> : <>
-                            <Link to="/signup">signup</Link>
-                            <Link to="/login">Login</Link>
+                            <Link to="/signup" onClick={toggleMenu}>signup</Link>
+                            <Link to="/login" onClick={toggleMenu}>Login</Link>
                         </>}
+
                     </div>
 
                     {/* {location.state.id} */}

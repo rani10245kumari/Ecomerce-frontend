@@ -443,7 +443,6 @@ a {
   /*=======================CARTLOGO-DESIGN==============*/
   .authentication {
     display: none;
-
   }
 
   .authenticationMobile {
@@ -467,6 +466,7 @@ a {
     left: 4vw;
     top: 7vh;
     color: seagreen;
+
   }
 
   .counting {
@@ -481,7 +481,7 @@ a {
   }
 
 
-  .authentication:hover .user-fill {
+  .authenticationMobile:hover .user-fill {
     display: flex;
     flex-direction: column;
     z-index: 20;
