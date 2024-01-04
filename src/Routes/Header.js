@@ -60,7 +60,14 @@ function Header() {
                         <li><Link to="/Clothes" onClick={toggleMenu}>Clothes</Link></li >
                         <li><Link to="/Electronics" onClick={toggleMenu}>Electronics</Link></li >
                         <li><Link to="/HealthCare" onClick={toggleMenu}>HealthCare</Link></li >
-
+                        <li className='mobile-signup'> {authentication ? <Link onClick={() => {
+                            dispatch(Logout());
+                            dispatch(authenticationUser(false));
+                        }}> Log Out </Link> : <>
+                            <Link to="/signup" onClick={toggleMenu} className='msign'>signup</Link>
+                            <Link to="/login" onClick={toggleMenu} className='msign'>Login</Link>
+                        </>}
+                        </li>
                     </ul>
 
                 </div>
@@ -76,8 +83,8 @@ function Header() {
                             dispatch(Logout());
                             dispatch(authenticationUser(false));
                         }}> Log Out </Link> : <>
-                            <Link to="/signup" onClick={toggleMenu}>signup</Link>
-                            <Link to="/login" onClick={toggleMenu}>Login</Link>
+                            <Link to="/signup">signup</Link>
+                            <Link to="/login">Login</Link>
                         </>}
 
                     </div>

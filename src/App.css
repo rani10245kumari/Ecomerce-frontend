@@ -461,11 +461,12 @@ a {
 
 
   .user {
-    position: absolute;
+    /* position: absolute;
     font-size: 30px;
     left: 4vw;
     top: 7vh;
-    color: seagreen;
+    color: seagreen; */
+    display: none;
 
   }
 
@@ -480,8 +481,22 @@ a {
     display: none;
   }
 
+  .mobile-signup {
+    display: flex;
+    gap: 30vw;
+    justify-content: space-evenly;
+  }
 
-  .authenticationMobile:hover .user-fill {
+  .msign {
+    border: 2px solid palevioletred;
+    width: 25vw;
+    background-color: rgb(241, 170, 182);
+    border-radius: 5px;
+    color: white;
+  }
+
+
+  /* .authenticationMobile:hover .user-fill {
     display: flex;
     flex-direction: column;
     z-index: 20;
@@ -492,7 +507,7 @@ a {
     text-align: center;
     color: seagreen;
 
-  }
+  } */
 
   a {
     text-decoration: none;
