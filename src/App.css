@@ -181,13 +181,11 @@ a {
 /*-------body design of all component--------------------=======*/
 .main-container {
   height: auto;
-  border: 2px solid red;
 }
 
 .container2 {
   display: flex;
   justify-content: space-evenly;
-  /* height: 190vh; */
   width: 100%;
   gap: 4vw;
   flex-wrap: wrap;
@@ -217,9 +215,6 @@ a {
 /*==============HOME PAGE===========================*/
 .container-home {
   height: auto;
-  /* position: absolute;
-  top: 120vh; */
-  border: 2px solid green;
 }
 
 .container2-home {
@@ -272,10 +267,7 @@ a {
 /* =================customer support facilities========================*/
 .facilties {
   height: 60vh;
-  border: 2px solid black;
   width: 100%;
-  /* position: relative;
-  top: 270vh; */
   display: flex;
   flex-wrap: wrap;
   gap: 1vw;
@@ -310,7 +302,6 @@ a {
 .featurehead {
   text-align: center;
   height: auto;
-  border: 2px solid black;
   width: 100%;
 }
 
@@ -475,6 +466,7 @@ a {
     font-size: 30px;
     left: 4vw;
     top: 7vh;
+    color: seagreen;
   }
 
   .counting {
@@ -492,13 +484,13 @@ a {
   .authentication:hover .user-fill {
     display: flex;
     flex-direction: column;
-    z-index: 1;
-    position: relative;
-    top: 13vh;
-    background-color: rgb(253, 216, 222);
-    font-size: 24px;
+    z-index: 20;
+    position: absolute;
+    top: 14vh;
+    background-color: rgb(157, 235, 235);
+    font-size: 28px;
     text-align: center;
-    color: rgb(177, 19, 111);
+    color: seagreen;
 
   }
 
@@ -541,7 +533,7 @@ a {
     height: auto;
     width: 100%;
     top: 74vh;
-    border: 2px solid green;
+
   }
 
   .container2-home {
