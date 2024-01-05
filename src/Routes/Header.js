@@ -76,7 +76,8 @@ function Header() {
                     <div className='authMobile'>
                         <span className='user'><i class="fa-solid fa-user"></i></span>
                         <span className='counting'>{authentication ? `${countItem.length}` : 0}</span>
-                        <Link className='cart-icon' to='/cart' onClick={toggleMenu}><i class="fa-solid fa-cart-shopping"></i></Link>
+                        <Link className='cart-icon' to='/cart' ><i class="fa-solid fa-cart-shopping"></i></Link>
+                        <Link className='cart-icon-mob' to='/cart' onClick={toggleMenu} ><i class="fa-solid fa-cart-shopping"></i></Link>
                     </div>
                     <div className='user-fill'>
                         {authentication ? <Link onClick={() => {

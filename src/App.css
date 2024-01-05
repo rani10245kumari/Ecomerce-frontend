@@ -58,6 +58,10 @@ body {
   color: seagreen;
 }
 
+.cart-icon-mob {
+  display: none;
+}
+
 
 .user {
   position: absolute;
@@ -453,10 +457,16 @@ a {
   }
 
   .cart-icon {
-    font-size: 30px;
+    display: none;
+  }
+
+  .cart-icon-mob {
+    font-size: 31px;
     position: absolute;
     left: 80vw;
     top: 7vh;
+    color: seagreen;
+    display: block;
   }
 
 
@@ -759,9 +769,16 @@ a {
   }
 
   .cart-icon {
-    font-size: 34px;
-    left: 9vw;
-    top: 6.5vh;
+    display: none;
+  }
+
+  .cart-icon-mob {
+    font-size: 50px;
+    position: absolute;
+    left: 90vw;
+    top: 7vh;
+    color: seagreen;
+    display: block;
   }
 
   .user {
